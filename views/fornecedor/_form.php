@@ -10,7 +10,11 @@ use yii\bootstrap5\ActiveForm;
 
 <div class="fornecedor-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin([
+        'options' => [
+            'autocomplete' => 'off'
+        ]
+    ]); ?>
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 

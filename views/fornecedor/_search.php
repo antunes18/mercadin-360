@@ -14,11 +14,10 @@ use yii\bootstrap5\ActiveForm;
         'action' => ['index'],
         'method' => 'get',
         'options' => [
-            'data-pjax' => 1
+            'data-pjax' => 1,
+            'autocomplete' => 'off'
         ],
     ]); ?>
-
-    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'nome') ?>
 

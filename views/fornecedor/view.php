@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /** @var app\models\Fornecedor $model */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Fornecedors', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Fornecedores', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Apagar dados', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Tem certeza em apagar este cliente do sistema?',
+                'confirm' => 'Tem certeza em apagar este fornecedor do sistema?',
                 'method' => 'post',
             ],
         ]) ?>

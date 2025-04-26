@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\models\Fornecedor $model */
 
 $this->title = 'Atualizar dados do fornecedor: ' . $model->nome;
-$this->params['breadcrumbs'][] = ['label' => 'Fornecedors', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Fornecedores', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

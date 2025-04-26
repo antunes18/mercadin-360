@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\models\Fornecedor $model */
 
 $this->title = 'Create Fornecedor';
-$this->params['breadcrumbs'][] = ['label' => 'Fornecedors', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Fornecedores', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fornecedor-create">

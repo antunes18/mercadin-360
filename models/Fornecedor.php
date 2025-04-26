@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\components\CnpjValidator;
 use Yii;
 
 /**
@@ -40,6 +41,7 @@ class Fornecedor extends \yii\db\ActiveRecord
             [['telefone'], 'string', 'max' => 15],
             [['endereco'], 'string', 'max' => 255],
             [['cnpj'], 'unique'],
+            ['cnpj', CnpjValidator::class]
         ];
     }
 
@@ -74,6 +76,16 @@ class Fornecedor extends \yii\db\ActiveRecord
     public static function find()
     {
         return new FornecedorQuery(get_called_class());
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            $this->cnpj = preg_replace('/\D/', '', $this->cnpj);
+            return true;
+        }
+        
+        return false;
     }
 
 }
